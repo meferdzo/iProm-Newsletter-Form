@@ -1,3 +1,5 @@
+/***************** STYLE *********************/
+
 #main-wrapper{
   background: url(../img/bg.png) no-repeat top center;
   font-family: 'Open Sans', sans-serif;
@@ -5,6 +7,10 @@
   min-height: 600px;
   display: flex;
   text-align: center;
+  -webkit-animation-name: bgin; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 0.7s; /* Safari 4.0 - 8.0 */
+  animation-name: bgin;
+  animation-duration: 1s;
 }
 
 .input-element {
@@ -27,7 +33,6 @@ input {
 
 #close{
     position: absolute;
-    top: 3;
 }
 
 svg{
@@ -62,7 +67,7 @@ svg{
 }
 
 .error-message{
-  display: none;
+  font-size: 10px;
 }
 
 #send{
@@ -86,4 +91,28 @@ svg{
 #send:hover{
   border-width: 4px;
   font-weight: 600;
+}
+
+
+/***************** ANIMATIONS *********************/
+
+
+@keyframes bgin{
+
+  0% {transform: scale(0.0); visibility: hidden;}
+  100% {transform: scale(1.0); visibility: visible;}
+}
+
+
+/***************** MEDIA QUERIES *********************/
+
+@media screen and (max-width: 700px) {
+  #main-wrapper{
+   background: url(../img/bg2.png) no-repeat top center;
+ }
+
+  #inner-wrapper{
+      padding-top: 120px;
+      font-size: 10px;
+  }
 }

@@ -7,13 +7,11 @@
 </head>
 <body>
     <div id="main-wrapper">
-
         <div id="form">
-
             <div id="inner-wrapper">
 
               <div id="close">
-                <svg viewPort="0 0 12 12" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
                   <line x1="1" y1="15"
                        x2="15" y2="1"
                        stroke="white"
@@ -27,14 +25,15 @@
                 <h2 class="header">iPROM Spletna patrola</h2>
 
                 <p id="text">Bi želeli imeti pregled nad dogajanjem v svetu digitala in novih tehnologij? <span >Prijavite se na naš mesečni novičnik Spletna patrola.</span></p>
+                <form name="myform" method="post" onsubmit="return validateform()" action="https://data.iprom.si/novice/prijava">
                 <div class="input-group">
-                    <input class="input-element input-line" type="text" name="name" id="name" value="Ime in priimek"><br>
-                    <span id="name-error" class="error-message">Prosimo izpolnite zahtevano polje.</span>
+                    <input class="input-element input-line" name="name" id="name" value="Ime_in_priimek">
+                    <span id="name-error" class="error-message"></span>
                 </div>
 
                 <div class="input-group">
-                    <input class="input-element input-line" type="email" name="email" id="email" value="Elektronski naslov"><br>
-                    <span id="email-error" class="error-message">Prosimo izpolnite zahtevano polje.</span>
+                    <input class="input-element input-line" name="email" id="email" value="Elektronski_naslov">
+                    <span id="email-error" class="error-message"></span>
                 </div>
 
                 <div class="input-group input-consent">
@@ -44,10 +43,8 @@
 					Kadarkoli lahko zahtevate, da vaše osebne podatke popravimo, dopolnimo ali izbrišemo, s sporočilom na info@iprom.si. Več o vaših pravicah in varstvu osebnih podatkov izveste <a href="https://iprom.si/files/2018/05/iPROM_Politika_zasebnosti_GDPR.pdf ">tukaj</a>.</label>
                     <span id="consent-error" class="error-message">Če želite prejemati Spletno patrolo, potrebujemo vaše podatke, navedene v spletnem obrazcu.</span>
                 </div>
-
-
-
-                <button class="button-element white" id="send" type="button">PRIJAVI SE</button>
+                <button class="button-element white" id="send" type="submit">Pošlji</button>
+                </form>
             </div>
 
         </div>
@@ -55,7 +52,8 @@
         <div id="thankyou_message">
             <p id="text2">Zahvaljujemo se vam za prijavo na Spletno patrolo.</p>
         </div>
-    </div>
 
+    </div>
+    <script type="text/javascript" src="js/form.js"></script>
 </body>
 </html>
