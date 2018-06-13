@@ -1,0 +1,89 @@
+#main-wrapper{
+  background: url(../img/bg.png) no-repeat top center;
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+  min-height: 600px;
+  display: flex;
+  text-align: center;
+}
+
+.input-element {
+  background:none !important;
+  color: white;
+  padding-left: 10px;
+}
+
+input {
+    background: transparent;
+    border-top: transparent !important;
+    border-left: transparent !important;
+    border-right: transparent !important;
+    border-bottom: 4px solid !important;
+    font-weight: 200;
+    color: white;
+    padding-left: 0;
+    box-shadow: none !important;
+}
+
+#close{
+    position: absolute;
+    top: 3;
+}
+
+svg{
+  max-width: 20px;
+  max-height: 20px;
+}
+
+#form{
+  justify-content:center;
+  min-width: 100%;
+}
+
+#inner-wrapper{
+    align-items: center;
+    max-width: 400px;
+    margin: 0 auto;
+    padding-top: 70px;
+    position:relative;
+}
+
+.input-group{
+  text-align: center;
+}
+
+.input-consent{
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+
+#consent-label{
+  font-size: 11px;
+}
+
+.error-message{
+  display: none;
+}
+
+#send{
+  line-height: 30px;
+  border-radius: 100px;
+  display: inline-block;
+  font-size: 12px;
+  text-decoration: none;
+  font-weight: 400;
+  letter-spacing: 1px;
+  background: transparent;
+  padding: 0 15px;
+  box-shadow: none !important;
+  color: white;
+  border-style: solid;
+  border-width: 1px;
+  border-color: white;
+  transition-duration: .2s;
+}
+
+#send:hover{
+  border-width: 4px;
+  font-weight: 600;
+}
