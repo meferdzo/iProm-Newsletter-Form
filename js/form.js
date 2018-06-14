@@ -19,20 +19,21 @@ function validateform(){
 
   if(name == "" || email == ""){
     console.log("empty");
-    document.getElementById('name-error').innerHTML = 'Izpolnite to polje.'
-    document.getElementById('email-error').innerHTML = 'Izpolnite to polje.'
+    document.getElementById('name-error').innerHTML = 'Izpolnite to polje.';
+    document.getElementById('email-error').innerHTML = 'Izpolnite to polje.';
     return false;
 
   } else if (name == "Ime_in_priimek" || email == "Elektronski_naslov"){
     console.log("empty halo");
-    document.getElementById('name-error').innerHTML = 'Izpolnite to polje.'
-    document.getElementById('email-error').innerHTML = 'Izpolnite to polje.'
+    document.getElementById('name-error').innerHTML = 'Izpolnite to polje.';
+    document.getElementById('email-error').innerHTML = 'Izpolnite to polje.';
     return false;
   }  else if(btncheck == false){
+    document.getElementById('consent-error').innerHTML = 'S tem obvestilom se morate strinjati za nadaljevanje';
     console.log("no check");
     return false;
   } else{
-    console.log("thanks")
+    console.log("thanks");
     return true;
   }
 }
