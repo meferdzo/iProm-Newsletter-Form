@@ -15,6 +15,7 @@ closeBtn.addEventListener("click", fade, false)
 function validateform(){
   var name = document.getElementById('name').value;
   var email = document.getElementById('email').value;
+  var btncheck = document.getElementById('consent').checked
 
   if(name == "" || email == ""){
     console.log("empty");
@@ -27,7 +28,10 @@ function validateform(){
     document.getElementById('name-error').innerHTML = 'Izpolnite to polje.'
     document.getElementById('email-error').innerHTML = 'Izpolnite to polje.'
     return false;
-  }  else{
+  }  else if(btncheck == false){
+    console.log("no check");
+    return false;
+  } else{
     console.log("thanks")
     return true;
   }
